@@ -70,17 +70,17 @@ public class Converter {
                 String recYds = row[8];
                 String recTds = row[9];
                 String fieldGoals = row[10];
-                String fantasyPpg = row[44];
+                String tackles = row[11];
                 String age = row[13];
                 String team = row[14];
                 String passCompleted = row[17];
                 String passAttempted = row[18];
-                String interceptions = row[19];
-                String sacked = row[24];
-                String sackedYdsLost = row[25];
-                String pos = row[69];
+                String interceptions = row[23];
+                String sacked = row[28];
+                String sackedYdsLost = row[29];
+                String pos = row[71];
                 String[] cleanData = { rank, name, started, passingYds, passingTds, rushingYds, rushingTds, recYds,
-                        recTds, fieldGoals, fantasyPpg, age, team, passCompleted, passAttempted, interceptions, sacked,
+                        recTds, fieldGoals, tackles, age, team, passCompleted, passAttempted, interceptions, sacked,
                         sackedYdsLost, pos };
 
                 for (int i = 0; i < cleanData.length; i++) {
@@ -101,7 +101,7 @@ public class Converter {
                 newAthlete.setRecYds(Integer.parseInt(cleanData[7]));
                 newAthlete.setRecTds(Integer.parseInt(cleanData[8]));
                 newAthlete.setFieldGoals(Integer.parseInt(cleanData[9]));
-                newAthlete.setFantasyPpg(Double.parseDouble(cleanData[10]));
+                newAthlete.setTackles(Integer.parseInt(cleanData[10]));
                 newAthlete.setAge(Integer.parseInt(cleanData[11]));
                 newAthlete.setTeam(cleanData[12]);
                 newAthlete.setPassCompleted(Integer.parseInt(cleanData[13]));

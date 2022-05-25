@@ -1,18 +1,14 @@
 package com.fantasy.backend.controllers;
 
 import java.util.ArrayList;
-
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
 import com.fantasy.backend.models.Athlete;
+import com.fantasy.backend.models.Team;
 import com.fantasy.backend.services.AthleteService;
 import com.fantasy.backend.services.Converter;
 import com.fantasy.backend.services.TeamService;
@@ -35,7 +31,6 @@ public class MainController implements ErrorController {
 
 	@RequestMapping(value = { "/" })
 	public String index() {
-		String errormsg = "Error";
 		return "error";
 	}
 
@@ -47,11 +42,11 @@ public class MainController implements ErrorController {
 	@PostMapping("/add_athletes")
 	public String addAthletes() {
 		System.out.println("TEST TEST TEST");
-		// ArrayList<Team> teams = converter.getTeams();
-		// ts.create(teams);
-		converter.setFileName("playerlist");
-		ArrayList<Athlete> athletes = converter.convertPlayerData();
-		as.create(athletes);
+		ArrayList<Team> teams = converter.getTeams();
+		ts.create(teams);
+		// converter.setFileName("playerlist");
+		// ArrayList<Athlete> athletes = converter.convertPlayerData();
+		// as.create(athletes);
 		return "redirect:/";
 	}
 };

@@ -46,7 +46,7 @@ public class Athlete {
 
 	private Integer fieldGoals;
 
-	private Double fantasyPpg;
+	private Integer tackles;
 
 	private Integer age;
 
@@ -159,12 +159,12 @@ public class Athlete {
 		this.fieldGoals = fieldGoals;
 	}
 
-	public Double getFantasyPpg() {
-		return this.fantasyPpg;
+	public Integer getTackles() {
+		return this.tackles;
 	}
 
-	public void setFantasyPpg(Double fantasyPpg) {
-		this.fantasyPpg = fantasyPpg;
+	public void setTackles(Integer newTackles) {
+		this.tackles = newTackles;
 	}
 
 	public Integer getAge() {
