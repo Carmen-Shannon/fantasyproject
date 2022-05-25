@@ -78,7 +78,7 @@ public class Converter {
                 String interceptions = row[23];
                 String sacked = row[28];
                 String sackedYdsLost = row[29];
-                String pos = row[70];
+                String pos = row[row.length - 1];
                 String[] cleanData = { rank, name, started, passingYds, passingTds, rushingYds, rushingTds, recYds,
                         recTds, fieldGoals, tackles, age, team, passCompleted, passAttempted, interceptions, sacked,
                         sackedYdsLost, pos };

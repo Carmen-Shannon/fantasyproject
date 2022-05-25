@@ -38,15 +38,17 @@ public class MainController implements ErrorController {
 	public String errorMap() {
 		return "redirect:/";
 	}
-
-	@PostMapping("/add_athletes")
-	public String addAthletes() {
-		System.out.println("TEST TEST TEST");
-		ArrayList<Team> teams = converter.getTeams();
-		ts.create(teams);
-		// converter.setFileName("playerlist");
-		// ArrayList<Athlete> athletes = converter.convertPlayerData();
-		// as.create(athletes);
-		return "redirect:/";
-	}
+	
+	
+	// KEEP THIS POST CLOSED UNLESS YOU NEED TO ADD OR UPDATE PLAYER/TEAM INFORMATION
+//	@PostMapping("/add_athletes")
+//	public String addAthletes() {
+//		System.out.println("TEST TEST TEST");
+//		ArrayList<Team> teams = converter.getTeams();
+//		ts.create(teams);
+//		 converter.setFileName("playerlist");
+//		 ArrayList<Athlete> athletes = converter.convertPlayerData();
+//		 as.create(athletes);
+//		return "redirect:/";
+//	}
 };
