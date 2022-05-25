@@ -18,11 +18,11 @@ public class Converter {
     private BufferedReader reader;
 
     public Converter(String fileName) {
-        this.fileName = "backend/src/main/resources/assets/" + fileName + ".csv";
+        this.fileName = "assets/" + fileName + ".csv";
     }
 
     public void setFileName(String newFileName) {
-        this.fileName = "backend/src/main/resources/assets/" + newFileName + ".csv";
+        this.fileName = "assets/" + newFileName + ".csv";
     }
 
     public ArrayList<Team> getTeams() {
@@ -78,7 +78,7 @@ public class Converter {
                 String interceptions = row[23];
                 String sacked = row[28];
                 String sackedYdsLost = row[29];
-                String pos = row[71];
+                String pos = row[70];
                 String[] cleanData = { rank, name, started, passingYds, passingTds, rushingYds, rushingTds, recYds,
                         recTds, fieldGoals, tackles, age, team, passCompleted, passAttempted, interceptions, sacked,
                         sackedYdsLost, pos };
